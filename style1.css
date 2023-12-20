@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {
+    font-family: 'Lato';
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+.game-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.player {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    /* height: 100%; */
+}
+
+.player h2 {
+    margin-bottom: 10px;
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.controls button {
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+}
+
+.controls button img {
+    flex: 0 0 20px; /* Ne grandit pas, ne rétrécit pas, base à 50px mais ne fonctionne pas*/
+    height: 30px;
+    padding: 5px ;
+    margin: 5px ;
+}
+
+.current-score-box {
+    background-color: crimson;
+    color: white;
+    width: 100px;
+    height: 80px;
+    display: flex;
+    flex-direction: column; /* Empile les éléments verticalement */
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 4,9em;
+}
+#current-score-1, #current-score-2 {
+    font-size: 1.5em;
+}
+.current-label {
+    color: black; 
+    font-size: 0.8em; 
+    margin-bottom: 8px;
+}
