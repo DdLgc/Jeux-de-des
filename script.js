@@ -66,4 +66,5 @@ function nextPlayer() {
 }
 // score global a afficher plus grand en rouge 
 // une couleur plus foncé sur le joueur actif 
-// changement de couleur active player 
+// animation de dé 
+// menu dépliant pour les regles tout en haut
