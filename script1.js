@@ -7,6 +7,8 @@ document.getElementById("roll-dice").addEventListener("click", function () {
     let dice = Math.floor(Math.random() * 6) + 1;
     document.getElementById("last-roll").textContent = dice;
 
+    document.getElementById("dice-image").src = './img/Dice-' + dice + '.svg';
+
     if (dice !== 1) {
       currentScore += dice;
       document.getElementById("current-score-" + activePlayer).textContent =
