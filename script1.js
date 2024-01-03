@@ -5,7 +5,7 @@ init();
 document.getElementById("roll-dice").addEventListener("click", function () {
   if (gamePlaying) {
     let dice = Math.floor(Math.random() * 6) + 1;
-    document.getElementById("last-roll").textContent = dice;
+    // document.getElementById("last-roll").textContent = dice;
 
     document.getElementById("dice-image").src = './img/Dice-' + dice + '.svg';
 
@@ -37,6 +37,14 @@ document.getElementById("hold").addEventListener("click", function () {
 document.getElementById("new-game").addEventListener("click", init);
 
 function init() {
+
+  let player1Name = prompt("Nom du joueur1","Joueur1");
+  let player2Name = prompt("Nom du joueur2","Joueur2");
+
+  document.getElementById("player1").querySelector("h2").textContent = player1Name
+
+  document.getElementById("player2").querySelector("h2").textContent = player2Name
+
   scores = [0, 0];
   activePlayer = 1;
   currentScore = 0;
@@ -46,7 +54,7 @@ function init() {
   document.getElementById("global-score-2").textContent = "0";
   document.getElementById("current-score-1").textContent = "0";
   document.getElementById("current-score-2").textContent = "0";
-  document.getElementById("last-roll").textContent = "0";
+  // document.getElementById("last-roll").textContent = "0";
 }
 
 function nextPlayer() {
@@ -56,5 +64,6 @@ function nextPlayer() {
   document.getElementById("current-score-1").textContent = "0";
   document.getElementById("current-score-2").textContent = "0";
 }
-// manque le prompt pour remplacer nom 
+// score global a afficher plus grand en rouge 
+// une couleur plus foncé sur le joueur actif 
 // changement de couleur active player 
