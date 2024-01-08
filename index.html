@@ -12,22 +12,21 @@
 <body>
   <div class="game-container d-flex">
     <div class="player" id="player1">
-      <h2>PLAYER 1</h2>
+      <div class="indicator"></div><h2>PLAYER 1</h2>
       <p><span id="global-score-1">0</span></p>
       <div class="current-score-box"><span class="current-label">Current</span><span id="current-score-1">0</span></div>
     </div>
     <div class="player" id="player2">
-      <h2>PLAYER 2</h2>
+      <div class="indicator"></div><h2>PLAYER 2</h2>
       <p><span id="global-score-2">0</span></p>
       <div class="current-score-box"><span class="current-label">Current</span><span id="current-score-2">0</span></div>
     </div>
     <div class="controls">
       <button id="new-game"><img src="./img/newGame.svg">NEW GAME</button>
       <p>
-        <div class="dice-container">
-          <img src="./img/dice1.svg" id="dice-image" alt="Dé">
-        </div>
-      <!-- <span id="last-roll"></span> -->
+      <div class="dice-container">
+        <img src="./img/Dice-1.svg" id="dice-image" alt="Dé">
+      </div>
       </p>
       <button id="roll-dice"><img src="./img/roll.svg">ROLL DICE</button>
       <button id="hold"><img src="./img/hold.svg">HOLD</button>
@@ -41,5 +40,7 @@
     crossorigin="anonymous"></script>
   <script src="script.js"></script>
 </body>
-
 </html>
+
+
+
