@@ -78,6 +78,6 @@ function nextPlayer() {
 
 
 
-//probleme d'affichage du nom du joueur lorsque le jeu est lancé et background !!
+//background fonctionne pas
 // animation de dé 
 // menu dépliant pour les regles tout en haut

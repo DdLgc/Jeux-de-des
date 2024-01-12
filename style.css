@@ -26,22 +26,30 @@ body {
 .player.active {
     color: rgb(0, 0, 0);
 }
+.title-container {
+    display: inline-flex;
+    align-items: center;
+}
 .indicator {
-    display: none;
+    display: flex;
+    vertical-align: middle;
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    display:inline-block;
     margin-right: 5px;
 }
 .player.active .indicator{
-    display: inline-block;
     background-color:crimson;
     color: white;
+    float: left;
+    margin-left: 1em;
 }
 
 .player h2 {
+    display:flex ;
     margin-bottom: 10px;
+    vertical-align: middle;
+
 }
 
 .controls {
