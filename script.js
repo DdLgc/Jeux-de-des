@@ -78,7 +78,6 @@ function nextPlayer() {
 
 
 
-
-// une couleur plus foncé sur le joueur actif 
+//probleme d'affichage du nom du joueur lorsque le jeu est lancé et background !!
 // animation de dé 
 // menu dépliant pour les regles tout en haut
