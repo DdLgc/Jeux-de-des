@@ -26,7 +26,8 @@
         <div class="indicator"></div>
       </div>
       <p><span id="global-score-2">0</span></p>
-      <div class="current-score-box bg-danger text-white d-flex flex-column align-items-center justify-content-center"><span class="current-label">Current</span><span id="current-score-2">0</span></div>
+      <div class="current-score-box bg-danger text-white d-flex flex-column align-items-center justify-content-center">
+        <span class="current-label">Current</span><span id="current-score-2">0</span></div>
     </div>
     <div class="controls position-absolute top-50 start-50 translate-middle">
       <button id="new-game" class="d-flex btn "><img src="./img/newGame.svg">NEW GAME</button>
@@ -35,10 +36,13 @@
         <img src="./img/Dice-1.svg" id="dice-image" alt="Dé">
       </div>
       </p>
-      <button id="roll-dice" class="d-flex btn btn-link"><img src="./img/roll.svg">ROLL DICE</button>
-      <button id="hold" class="d-flex btn btn-link"><img src="./img/hold.svg">HOLD</button>
+      <button id="roll-dice" class="d-flex btn "><img src="./img/roll.svg">ROLL DICE</button>
+      <button id="hold" class="d-flex btn "><img src="./img/hold.svg">HOLD</button>
     </div>
   </div>
+
+  <canvas class="confetti" id="canvas"></canvas>
+
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
@@ -49,6 +53,3 @@
 </body>
 
 </html>
-
-
-<!-- CSS to Bootstrap en cours currentscorebox -->
