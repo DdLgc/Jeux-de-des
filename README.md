@@ -1,10 +1,10 @@
 # Jeux de dés 
 
 Je suis David Le Gouellec actuellement en formation chez STUDI depuis Avril 2022 en 
-tant que Développeur Web et Web mobile Fullstack. Dans ce readme, je vous propose toutes les explications et documentations pour cet examen blanc :
+tant que Développeur Web et Web mobile Fullstack. Dans ce readme, je vous propose les explications et documentations pour cet examen blanc :
 **Dynamiser vos sites web avec Javascript**  
-![Lien du site en ligne](https://ddlgc.github.io/Jeux-de-des/)
-![Lien du sujet](./images/GDWFSDVSWEBAJAVAEXAIII1A-dynamiser-java.pdf)
+[Lien du site en ligne](https://ddlgc.github.io/Jeux-de-des/)  
+[Lien du sujet](./images/GDWFSDVSWEBAJAVAEXAIII1A-dynamiser-java.pdf)
 
 ## Modalités / Restrictions : 
 - Votre code sera structuré
@@ -38,7 +38,7 @@ Le premier joueur qui atteint les 100 points sur global gagne le jeu.
 
 
 ### Icones / Images / Sujet
-![Dossier images/icones](./images/)
+[Dossier images/icones](./images/)
 
 ## Links
 

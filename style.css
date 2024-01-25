@@ -52,7 +52,6 @@ body {
   padding: 5px;
   margin: 5px;
 }
-
 .current-score-box {
   background-color: crimson;
   color: white;
@@ -106,7 +105,6 @@ span#global-score-2 {
   align-items: center;
   height: 30vh;
 }
-
 .dice-container img {
   max-width: 100px;
   height: auto;
@@ -127,9 +125,4 @@ span#global-score-2 {
   height: 100%;
   z-index: 100;
   pointer-events: none;
-}
-.action {
-  text-align: center;
-  display: block;
-  margin-top: 20px;
 }
