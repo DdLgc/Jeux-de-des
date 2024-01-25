@@ -1,62 +1,17 @@
 let scores, currentScore, activePlayer, gamePlaying;
 let confetti = [];
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 let animationFrameId;
 
-let canvas = document.getElementById("canvas");
-let ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-init();
-
-document.getElementById("roll-dice").addEventListener("click", function () {
-  if (gamePlaying) {
-    let dice = Math.floor(Math.random() * 6) + 1;
-
-    let diceImage = document.getElementById("dice-image");
-    diceImage.style.animation = "none";
-    diceImage.src = "./img/Dice-" + dice + ".svg";
-
-    if (dice !== 1) {
-      currentScore += dice;
-      document.getElementById("current-score-" + activePlayer).textContent =
-        currentScore;
-    } else {
-      nextPlayer();
-    }
-  }
-});
-
-document.getElementById("hold").addEventListener("click", function () {
-  if (gamePlaying) {
-    scores[activePlayer - 1] += currentScore;
-    document.getElementById("global-score-" + activePlayer).textContent =
-      scores[activePlayer - 1];
-
-    checkWin();
-
-    //   if (scores[activePlayer - 1] >= 50) {
-    //     alert("Joueur " + activePlayer + " a gagné !");
-    //     gamePlaying = false;
-    //   } else {
-    //     nextPlayer();
-    //   }
-  }
-});
-
-document.getElementById("new-game").addEventListener("click", init);
-
-function updateActivePlayer() {
-  document.getElementById("player1").classList.remove("active");
-  document.getElementById("player2").classList.remove("active");
-  document.getElementById("player" + activePlayer).classList.add("active");
-}
-
-function init() {
+const init = () => {
   stopConfetti();
 
-  let player1Name = prompt("Nom du joueur1", "Player 1");
-  let player2Name = prompt("Nom du joueur2", "Player 2");
+  const player1Name = prompt("Nom du joueur1", "Player 1");
+  const player2Name = prompt("Nom du joueur2", "Player 2");
 
   document.getElementById("player1").querySelector("h2").textContent =
     player1Name;
@@ -73,37 +28,63 @@ function init() {
   document.getElementById("current-score-1").textContent = "0";
   document.getElementById("current-score-2").textContent = "0";
   updateActivePlayer();
-}
+};
 
-function nextPlayer() {
+const updateActivePlayer = () => {
+  document.getElementById("player1").classList.remove("active");
+  document.getElementById("player2").classList.remove("active");
+  document.getElementById(`player${activePlayer}`).classList.add("active");
+};
+
+const nextPlayer = () => {
   activePlayer = activePlayer === 1 ? 2 : 1;
   currentScore = 0;
 
   document.getElementById("current-score-1").textContent = "0";
   document.getElementById("current-score-2").textContent = "0";
   updateActivePlayer();
-}
+};
 
-function checkWin() {
+const checkWin = () => {
   if (scores[activePlayer - 1] >= 50) {
-    alert("Joueur " + activePlayer + " a gagné !");
+    alert(`Joueur ${activePlayer} a gagné !`);
     initConfetti();
     render();
     gamePlaying = false;
   } else {
     nextPlayer();
   }
-}
+};
+
+document.getElementById("roll-dice").addEventListener("click", () => {
+  if (gamePlaying) {
+    const dice = Math.floor(Math.random() * 6) + 1;
+    const diceImage = document.getElementById("dice-image");
+    diceImage.style.animation = "none";
+    diceImage.src = `./img/Dice-${dice}.svg`;
+
+    if (dice !== 1) {
+      currentScore += dice;
+      document.getElementById(`current-score-${activePlayer}`).textContent =
+        currentScore;
+    } else {
+      nextPlayer();
+    }
+  }
+});
+
+document.getElementById("hold").addEventListener("click", () => {
+  if (gamePlaying) {
+    scores[activePlayer - 1] += currentScore;
+    document.getElementById(`global-score-${activePlayer}`).textContent =
+      scores[activePlayer - 1];
+    checkWin();
+  }
+});
+
+document.getElementById("new-game").addEventListener("click", init);
 
 //-----------Confetti js--------------
-//-----------Var Inits--------------
-// canvas = document.getElementById("canvas");
-// ctx = canvas.getContext("2d");
-// canvas.width = window.innerWidth;
-// canvas.height = window.innerHeight;
-// cx = ctx.canvas.width / 2;
-// cy = ctx.canvas.height / 2;
-
 const confettiCount = 300;
 const gravity = 0.5;
 const terminalVelocity = 5;
@@ -119,17 +100,14 @@ const colors = [
   { front: "turquoise", back: "darkturquoise" },
 ];
 
-//-----------Functions--------------
 resizeCanvas = () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-  // cx = ctx.canvas.width / 2;
-  // cy = ctx.canvas.height / 2;
 };
 
 randomRange = (min, max) => Math.random() * (max - min) + min;
 
-function initConfetti() {
+const initConfetti = () => {
   confetti = [];
   for (let i = 0; i < confettiCount; i++) {
     confetti.push({
@@ -157,7 +135,7 @@ function initConfetti() {
     });
   }
   canvas.style.pointerEvents = "none";
-}
+};
 
 //---------Render-----------
 render = () => {
@@ -202,20 +180,14 @@ render = () => {
     ctx.setTransform(1, 0, 0, 1, 0, 0);
   });
 
-
   if (confetti.length > 0) {
     animationFrameId = window.requestAnimationFrame(render);
   } else {
     animationFrameId = null;
   }
-
-  // Fire off another round of confetti
-  // if (confetti.length <= 10) initConfetti();
-  // window.requestAnimationFrame(render);
-  // animationFrameId = window.requestAnimationFrame(render);
 };
 
-function stopConfetti() {
+const stopConfetti = () => {
   if (animationFrameId) {
     window.cancelAnimationFrame(animationFrameId);
     animationFrameId = null;
@@ -223,14 +195,11 @@ function stopConfetti() {
   confetti = [];
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   canvas.style.pointerEvents = "auto";
-}
+};
 
-//----------Resize----------
 window.addEventListener("resize", function () {
   resizeCanvas();
 });
-
-//------------Click------------
 window.addEventListener("click", function () {
   initConfetti();
 });
