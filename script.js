@@ -61,7 +61,7 @@ document.getElementById("roll-dice").addEventListener("click", () => {
     const dice = Math.floor(Math.random() * 6) + 1;
     const diceImage = document.getElementById("dice-image");
     diceImage.style.animation = "none";
-    diceImage.src = `./img/Dice-${dice}.svg`;
+    diceImage.src = `./images/Dice-${dice}.svg`;
 
     if (dice !== 1) {
       currentScore += dice;
