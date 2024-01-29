@@ -203,3 +203,17 @@ window.addEventListener("resize", function () {
 window.addEventListener("click", function () {
   initConfetti();
 });
+
+// ----------------- Rules --------------------
+document.addEventListener('DOMContentLoaded', (event) => {
+  document.getElementById("toggle-rules-btn").addEventListener("click", function() {
+      var rulesContainer = document.getElementById("rules-container");
+      if (rulesContainer.style.display === "none") {
+          rulesContainer.style.display = "block";
+          this.textContent = "-";
+      } else {
+          rulesContainer.style.display = "none";
+          this.textContent = "+";
+      }
+  });
+});

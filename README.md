@@ -12,7 +12,7 @@ tant que Développeur Web et Web mobile Fullstack. Dans ce readme, je vous propo
 - Les ressources seront disponibles dans un dossier images
 - La font sera Lato (google font) : specimen/Lato
 - Le Framework CSS de votre choix
-- L'application devra ressembler a peu prés a ça 
+- L'application devra ressembler a peu prés a ça  
 ![Représentation du rendu](./images/Capture%20d’écran.png)
 
 ## Règles :  
@@ -28,14 +28,16 @@ Le premier joueur qui atteint les 100 points sur global gagne le jeu.
 
 ## Charte graphique
 
-### Color Reference
+### Couleur
 
 | **Color**             | **Hex**                                                                |
 | ----------------- | ------------------------------------------------------------------ |
 | Crimson | ![#dc143c](https://via.placeholder.com/10/dc143c?text=+) #dc143c |
 | White | ![#ffffff](https://via.placeholder.com/10/ffffff?text=+) #ffffff |
-| Grey | ![#ddd](https://via.placeholder.com/10/ddd?text=+) #ddd |
+| Grey | ![#ddd](https://via.placeholder.com/10/ddd?text=+) #ddd |  
 
+### Font  
+[Google Font Lato](https://fonts.google.com/?query=lato)  
 
 ### Icones / Images / Sujet
 [Dossier images/icones](./images/)
@@ -45,13 +47,18 @@ Le premier joueur qui atteint les 100 points sur global gagne le jeu.
 ### Documentation   
 [Inspiration Confetti](https://www.codehim.com/animation-effects/javascript-confetti-explosion-effect/)  
 [Doc Bootstrap](https://getbootstrap.com/)  
-[Google Font Lato](https://fonts.google.com/?query=lato)  
 
 [![Trello](https://img.shields.io/badge/Trello-0052CC?style=for-the-badge&logo=trello&logoColor=white)](https://trello.com/b/cNpyGhNE/tache)
 [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DdLgc/Jeux-de-des)
-[![Linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/david-le-gouellec-551322243/)
+[![Linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/david-le-gouellec-551322243/)  
+
+![GitHub deployments](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=GitHub%20Pages&logoColor=white)
+
 <!-- [![Portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherineoelsner.com/) -->
 
+## Axe d'amélioration pour le projet 
 
-
-<!-- Amélioration animation au click et pas au debut de la partie , aller chercher le nom du joueur dans la pop-up du gagnant,animation three.js -->
+-> Petite animation au click 'Roll dice' et non au début du jeu
+-> Ajouter un onglet déroulant pour afficher les régles
+-> La pop-up affiche le nom du prompt et pas joueur 1 ou 2 
+-> Animation en three.js [Three.js](https://threejs-journey.com/)
