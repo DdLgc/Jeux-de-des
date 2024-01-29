@@ -1,0 +1,50 @@
+<button>
+    <div>
+      <p class="one">+</p>
+      <p class="two">Rules</p>
+    </div>
+  </button>
+
+
+
+<style>
+    * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  overflow: hidden;
+  border: unset;
+  border-radius: 10px;
+  background-color: turquoise;
+  transition: all 200ms;
+}
+
+button:hover {
+  background-color: blue;
+}
+
+div {
+  height: 80px;
+  transform: translateY(0%);
+  transition: inherit;
+}
+
+div:hover {
+  transform: translateY(-50%)
+}
+
+p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 50%;
+  font-size: 18px;
+  font-weight: 600;
+}
+</style>

@@ -11,10 +11,18 @@
 
 <body>
   <canvas class="confetti" id="canvas"></canvas>
-  <button id="toggle-rules-btn" class="btn">+</button>
+  <button id="toggle-rules-btn" class="btn">+
+  </button>
   <div class=" rules-container " id="rules-container">
     <h3>Regles du jeu </h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, esse veniam suscipit libero sapiente similique, explicabo, harum fugiat repudiandae molestias nihil eum inventore. At, cumque?</p>
+    <p>Chaque joueur possède un score temporaire (ROUND) et un score global (GLOBAL).
+      À chaque tour, le joueur a son ROUND initialisé à 0 et peut lancer un dé autant de fois qu'il le souhaite. Le 
+      résultat d’un lancer est ajouté au ROUND. 
+      Lors de son tour, le joueur peut décider à tout moment de:
+      - Cliquer sur l’option “Hold”, qui permet d’envoyer les points du ROUND vers le GLOBAL. Ce sera alors le
+      tour de l’autre joueur.
+      - Lancer le dé. S’il obtient un 1, son score ROUND est perdu et c’est la fin de son tour.
+      Le premier joueur qui atteint les 100 points sur global gagne le jeu.</p>
   </div>
   <div class="game-container d-flex">
     <div class="player d-flex flex-column justify-content-around align-items-center" id="player1">

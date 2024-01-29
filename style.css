@@ -14,10 +14,14 @@ body {
   right: 10px;
   border-radius: 50px;
   background-color: crimson;
-  color: #fff;
+  color: #ffffff;
   z-index: 100;
 }
-
+.rules-text {
+  display: none;
+  position: absolute;
+  margin-left: 5px;
+}
 .rules-container {
   background-color: crimson;
   position: absolute;

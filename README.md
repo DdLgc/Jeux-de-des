@@ -58,7 +58,14 @@ Le premier joueur qui atteint les 100 points sur global gagne le jeu.
 
 ## Axe d'amélioration pour le projet 
 
--> Petite animation au click 'Roll dice' et non au début du jeu
--> Ajouter un onglet déroulant pour afficher les régles
--> La pop-up affiche le nom du prompt et pas joueur 1 ou 2 
+-> Petite animation au click 'Roll dice' et non au début du jeu  
+-> Ajouter un onglet déroulant pour afficher les régles  
+-> La pop-up affiche le nom du prompt et pas joueur 1 ou 2  
 -> Animation en three.js [Three.js](https://threejs-journey.com/)
+
+
+<!-- https://codepen.io/ocxigin/pen/qBQxmLW  inspi bouton et ajouter la biblioteque d'icone qui va avec  
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+</script>
+
+-->
